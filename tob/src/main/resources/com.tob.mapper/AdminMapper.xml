@@ -9,7 +9,7 @@
  	VALUES (
 	 	#{id},
 	 	#{password},
- 	)
+ 	) 
  </insert>
  
  <update id="update" parameterType="com.hnb.admin.AdminVO">

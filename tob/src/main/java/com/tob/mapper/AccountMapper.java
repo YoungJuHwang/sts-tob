@@ -14,7 +14,7 @@ public interface AccountMapper {
 	
 	// C : 추가(회원가입)
 	public int insert(AccountVO account);
-	
+	 
 	// R : 조회
 	public List<AccountVO> selectAll(Command command); 	// 전체조회
 	public List<AccountVO> selectOneBy(Command command); 	// 날짜로 조회
