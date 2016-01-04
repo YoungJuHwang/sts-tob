@@ -15,3 +15,4 @@ public int delete(String option2);
 public Option2VO searchByOption2(String option2);
 
 }
+ 

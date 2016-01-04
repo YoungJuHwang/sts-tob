@@ -10,7 +10,7 @@ public interface CategoryMapper {
 public	int registration(CategoryVO o);
 
 public int delete(String category);
-
+ 
 public CategoryVO searchByCategory(String category);
 
 }

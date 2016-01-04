@@ -12,7 +12,7 @@ public interface BookMapper {
 	public int delete(String bookid); //등록된 책 삭제 책 번호로
 	public BookVO searchByBook(String userid);
 	public int update(BookVO book);//책 수정
-	
+	 
 	public List<BookVO> selectAll();
 	
 	public int amountBook();  // 책 수량 <count>

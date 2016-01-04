@@ -12,7 +12,7 @@
  
  </insert>
 
- 
+  
  <delete id="delete" parameterType="string">
  DELETE FROM CATEGORY WHERE CATEGORY_ID = #{categoryId}
  </delete>

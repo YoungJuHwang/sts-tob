@@ -12,7 +12,7 @@
  
  </insert>
 
- 
+  
  <delete id="delete" parameterType="string">
  DELETE FROM OPTION2 WHERE OPTION2_ID = #{option2Id}
  </delete>

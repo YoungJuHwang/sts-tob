@@ -11,7 +11,7 @@
  (#{genreId},#{genreName})
  
  </insert>
-
+ 
  
  <delete id="delete" parameterType="string">
  DELETE FROM GENRE WHERE GENRE_ID = #{genreId}

@@ -13,3 +13,4 @@ public int delete(String genre);
 public GenreVO searchByGenre(String genre);
 
 }
+ 

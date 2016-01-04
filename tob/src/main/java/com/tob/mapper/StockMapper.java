@@ -13,3 +13,4 @@ public	int registration(StockVO o);
 public int delete(String stock);
 
 }
+ 

@@ -13,7 +13,7 @@ import com.tob.mapper.GenreMapper;
 public class CategoryServiceImpl implements CategoryService{
 	private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
 	@Autowired private SqlSession sqlSession;
-	
+	 
 	@Override
 	public int registration(CategoryVO o) {
 		CategoryMapper mapper = sqlSession.getMapper(CategoryMapper.class);

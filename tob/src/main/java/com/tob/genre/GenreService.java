@@ -5,7 +5,7 @@ public interface GenreService {
 	
 	//장르 등록
 	public int registration(GenreVO o);
-	
+	 
 	//장르 삭제
 	public int delete(String genre);
 		

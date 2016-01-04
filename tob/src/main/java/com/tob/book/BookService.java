@@ -1,7 +1,7 @@
 package com.tob.book;
 
 import java.util.List;
-
+ 
 public interface BookService {
 	
 	//책등록

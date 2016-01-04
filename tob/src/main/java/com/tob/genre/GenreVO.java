@@ -9,7 +9,7 @@ public class GenreVO implements Serializable{
 
 	private String genreId;  //장르 고유번호
 	private String genreName; //장르
-	
+	 
 	public String getGenreId() {
 		return genreId;
 	}

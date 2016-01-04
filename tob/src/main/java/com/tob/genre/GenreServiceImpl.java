@@ -12,7 +12,7 @@ public class GenreServiceImpl implements GenreService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(GenreServiceImpl.class);
 	@Autowired private SqlSession sqlSession;
-	
+	 
 	
 	@Override  //장르 등록
 	public int registration(GenreVO o) {

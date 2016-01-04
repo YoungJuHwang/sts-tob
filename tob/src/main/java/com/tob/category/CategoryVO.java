@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CategoryVO implements Serializable{
 	private static final long serialVersionUID = 1L;
-
+ 
 	private String categoryId;  // 고유번호
 	private String categoryName; // 카테고리 이름
 	

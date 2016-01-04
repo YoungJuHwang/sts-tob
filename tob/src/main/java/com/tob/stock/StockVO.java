@@ -30,5 +30,5 @@ public class StockVO  implements Serializable{
 		return "StockVO [stockId=" + stockId + ", stockName=" + stockName + "]";
 	}
 	
-	
+	 
 }
