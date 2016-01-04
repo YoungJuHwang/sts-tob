@@ -1,7 +1,7 @@
 package com.tob.event;
 
 import java.util.List;
-
+ 
 public interface EventService {
 	public int join(EventVO o);
 	public int change(EventVO o);

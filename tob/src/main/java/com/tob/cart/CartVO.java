@@ -1,7 +1,7 @@
 package com.tob.cart;
 
 import org.springframework.stereotype.Component;
- 
+  
 @Component
 public class CartVO {
 	private String bookId;

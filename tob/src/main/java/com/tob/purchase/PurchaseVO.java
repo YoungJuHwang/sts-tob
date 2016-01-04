@@ -1,7 +1,7 @@
 package com.tob.purchase;
 
 import org.springframework.stereotype.Component;
- 
+  
 @Component
 public class PurchaseVO {
 	private String purNum;

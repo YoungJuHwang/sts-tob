@@ -3,7 +3,7 @@ package com.tob.event;
 import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
-
+ 
 @Component
 public class EventVO  implements Serializable{
 
