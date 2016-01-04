@@ -1,4 +1,4 @@
-package com.hnb.admin;
+package com.tob.admin;
 
 public interface AdminService {
 

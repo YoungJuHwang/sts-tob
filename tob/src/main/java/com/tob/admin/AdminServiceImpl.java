@@ -1,4 +1,4 @@
-package com.hnb.admin;
+package com.tob.admin;
 
 
 import org.apache.ibatis.session.SqlSession;
@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hnb.account.AccountController;
-import com.hnb.mapper.AdminMapper;
+import com.tob.mapper.AdminMapper;
+import com.tob.account.AccountController;
 
 @Service
 

@@ -1,4 +1,4 @@
-package com.hnb.admin;
+package com.tob.admin;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,20 +14,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.hnb.global.CommandFactory;
-import com.hnb.member.MemberServiceImpl;
-import com.hnb.member.MemberVO;
-import com.hnb.movie.MovieServiceImpl;
-import com.hnb.movie.MovieVO;
+import com.tob.book.BookServiceImpl;
+import com.tob.book.BookVO;
+import com.tob.global.CommandFactory;
+
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 	
-	@Autowired MemberVO member;
+
 	@Autowired BookVO book;
-	@Autowired MemberServiceImpl memberService;
 	@Autowired BookServiceImpl bookService;
 	
 	@RequestMapping("/main")
@@ -39,13 +37,13 @@ public class AdminController {
 	public Model movieList(Model model){
 		logger.info("AdminController-bookList() 진입");
 		List<BookVO> bookList;
-		bookList = bookService.getList();
+		bookList = bookService.selectAll();
 		model.addAttribute("bookList",bookList);
 		
 		return model;
 	}
 	
-	@RequestMapping("/member_list/{pageNo}")
+	/*@RequestMapping("/member_list/{pageNo}")
 	public @ResponseBody Map<String,Object> memberList(
 			@PathVariable("pageNo")String pageNo,
 			Model model){
@@ -75,9 +73,9 @@ public class AdminController {
 		map.put("lastPage", lastPage);
 		map.put("groupSize", groupSize);
 		return map;
-	}
+	}*/
 	
-	@RequestMapping("/member_profile")
+	/*@RequestMapping("/member_profile")
 	public Model memberProfile(
 			String id,Model model
 			){
@@ -87,17 +85,18 @@ public class AdminController {
 		model.addAttribute("member", member);
 		return model;
 		
-	}
+	}*/
+	
 	@RequestMapping("/book_profile")
 	public Model bookProfile(String book_id,Model model){
 		logger.info(" 책 목록 진입");
 		logger.info(" 가져온 책 번호{}",book_id);
-		book = bookService.searchById(book_id);
+		book = bookService.searchByBook(book_id);
 		model.addAttribute("book", book);
 		
 		return model;
 	}
-	@RequestMapping("/insert")
+	/*@RequestMapping("/insert")
 	public Model insert(
 		@RequestParam("id") String id,
 		@RequestParam("password") String password,
@@ -116,24 +115,25 @@ public class AdminController {
 		int result = memberService.change(member);
 		model.addAttribute("result", id + " 님의 정보수정을 완료했습니다.");
 		return model;
-	}
+	}*/
+	
 	@RequestMapping("/insert2")
 	public Model insert2(String book_name,String price,Model model){
 		logger.info("인서트 진입");
 		logger.info("책이름{}",book_name);
 		logger.info("가격{}",price);
-		book = bookService.searchByName(book_name);
-		book.setPrice(price);
+		book = bookService.searchByBook(book_name);
+		book.setBookPrice(price);
 		model.addAttribute("book",book);
 		
 		return model;
 	}
-	@RequestMapping("/delete")
+	/*@RequestMapping("/delete")
 	public Model delete(String id,Model model){
 		memberService.remove(id);
 		model.addAttribute("result",id+"님의 탈퇴를 완료했습니다.");
 		return model;
-	}
+	}*/
 	
 	
 }

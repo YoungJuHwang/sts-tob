@@ -1,8 +1,8 @@
-package com.hnb.account;
+package com.tob.account;
 
 import java.util.List;
 
-import com.hnb.global.Command;
+import com.tob.global.Command;
 
 public interface AccountService {
 	
