@@ -11,7 +11,7 @@ public class AdminVO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+	 
 	private String id;
 	private String password;
 	
