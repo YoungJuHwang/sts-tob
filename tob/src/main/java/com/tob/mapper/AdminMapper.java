@@ -8,4 +8,4 @@ public interface AdminMapper {
 
 	public int insert(AdminVO admin);
 
-}
+} 

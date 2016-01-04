@@ -17,7 +17,7 @@ public class AdminServiceImpl implements AdminService{
 	private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
 	@SuppressWarnings("unused")
 	@Autowired private SqlSession sqlSession;
-	
+	 
 	
 	@Override
 	public int insert(AdminVO admin) {

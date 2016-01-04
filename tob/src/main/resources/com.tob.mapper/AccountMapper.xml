@@ -10,7 +10,7 @@
  	VALUES (
 	 	#{account_num},
 	 	#{total},
-	 	#{id}
+	 	#{id} 
  	)
  </insert>
  

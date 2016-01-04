@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component 
 public class AccountVO implements Serializable{
 	/**
 	 * 
