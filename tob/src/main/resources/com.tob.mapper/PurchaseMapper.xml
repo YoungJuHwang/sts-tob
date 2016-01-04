@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tob.mapper.PurchaseMapper">
+
+<select id="selectBypurNum" resultType="com.tob.purchase.PurchaseVO"
+ parameterType="string">
+ SELECT 
+PUR_NUM AS purNum,
+SUM AS sum,
+ACCOUNT_NUM AS accountNum,
+USERID AS userid
+FROM PURCHASE WHERE 
+PUR_NUM = #{purNum}
+ 
+</select>
+<select id="selectByAccNum" resultType="com.tob.purchase.PurchaseVO" 
+parameterType="string">
+SELECT 
+PUR_NUM AS purNum,
+SUM AS sum,
+ACCOUNT_NUM AS accountNum,
+USERID AS userid
+FROM PURCHASE WHERE ACCOUNT_NUM = #{accountNum}
+
+</select>
+<select id="selectAll" resultType="com.tob.purchase.PurchaseVO" 
+parameterType="">
+SELECT 
+PUR_NUM AS purNum,
+SUM AS sum,
+ACCOUNT_NUM AS accountNum,
+USERID AS userid
+FROM PURCHASE
+
+</select>
+
+<insert id="insert" parameterType="com.tob.purchase.PurchaseVO">
+
+INSERT INTO PURCHASE(
+PUR_NUM,
+SUM,
+ACCOUNT_NUM,
+USERID)
+VALUSE(
+#{purNum},
+#{sum},
+#{accountNum},
+#{userid}
+)
+
+
+</insert>
+
+<update id="update" parameterType="com.tob.purchase.PurchaseVO">
+UPDATE PURCHASE SET SUM = #{sum}, 
+ACCOUNT_NUM = #{accountNum}, 
+USERID = #{userid}
+WHERE PUR_NUM = #{purNum}
+
+</update>
+
+<delete id="delete" parameterType="string">
+DETETE FROM PURCHASE WHERE PUR_NUM = #{purNum}
+</delete>
+
+</mapper>
