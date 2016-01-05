@@ -7,7 +7,8 @@ import com.tob.global.Command;
 
 public interface MemberService {
 	 
-	   public int join(MemberVO o);
+	   public String Join(MemberVO o);
+	   public int join2(MemberVO o);
 	   public int change(MemberVO o);
 	   public MemberVO login(String userid, String password);
 	   public MemberVO logout(String userid, String password);
