@@ -2,6 +2,8 @@ package com.tob.member;
 
 import java.util.List;
 
+import com.tob.global.Command;
+
 
 public interface MemberService {
 	 
@@ -12,7 +14,7 @@ public interface MemberService {
 	   public int count();
 	   public MemberVO searchById(String userid);
 	   public List<MemberVO> searchBySearchword(String domain,String searchword);
-	   public List<MemberVO> getList();
+	   public List<MemberVO> getList(Command command);
 	   public int changePwd(MemberVO member);
 	   public int remove(String userid);
 	}

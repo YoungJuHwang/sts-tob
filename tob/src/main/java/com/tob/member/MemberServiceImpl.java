@@ -8,12 +8,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tob.global.Command;
 import com.tob.mapper.MemberMapper;
-import com.tob.member.MemberVO;
 
 @Service
 public class MemberServiceImpl implements MemberService{
-	private static final Logger logger = LoggerFactory.getLogger(MemberMapper.class);
+	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	@Autowired private SqlSession sqlSession;
 	
 		@Override
@@ -59,10 +59,10 @@ public class MemberServiceImpl implements MemberService{
 			return mapper.selectSomeBy(domain, searchword);
 		}
 		@Override
-		public List<MemberVO> getList() {
+		public List<MemberVO> getList(Command command) {
 			logger.info("MemberServiceImpl : getList");
 			MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-			return mapper.getList();
+			return mapper.getList(command);
 		}
 		@Override
 		public int changePwd(MemberVO member) {
