@@ -14,7 +14,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll"  href="#page-top">
                     <i class="fa fa-play-circle"></i>  <span class="light">TOB</span>||Hanbit
                 </a>
             </div>
@@ -22,7 +22,7 @@
             </nav>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse" >
 	<div class="nav navbar-nav">
-	<ul class="nav navbar-nav"	style="padding-top: 50px; margin: 0 auto; ">
+	<ul class="nav navbar-nav"	style="padding-top: 20px; margin: 0 auto; ">
 		<li style="padding-right: 100px;"><a
 			href="${context}/main/Home">HOME</a></li>
 		<li class="dropdown" style="padding-right: 100px;"><a href="${context}/book/Book"
@@ -41,12 +41,12 @@
 			href="${context}/event/Event">EVENT</a></li>
 		<li style="padding-right: 100px;"><a
 			href="${context}/purchase/Purchase">Purchase</a></li>
+		<li><a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span>관리자</a></li>
+		<li><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		<li><a href="${context}/member/Join">Join</a></li>
 	</ul>
-	<ul class="nav navbar-nav navbar-right">
-        <li style="padding-right: 100px;">
-        <a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span> 관리자</a></li>
-        <li><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+
+	
 	</div>
 </div>
 

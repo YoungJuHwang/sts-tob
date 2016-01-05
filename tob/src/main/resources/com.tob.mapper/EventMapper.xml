@@ -5,27 +5,27 @@
  <mapper namespace="com.tob.mapper.EventMapper">
  <select id="selectAll" resultType="com.tob.event.EventVO">
  	SELECT
- 	 	EVT_ID AS evtId,
- 	 	EVT_NAME AS evtName,
+ 	 	EVENT_ID AS evtId,
+ 	 	EVENT_NAME AS evtName,
  	 	FROM_DT AS fromDt,
  	 	TO_DT AS toDt
  	 FROM EVENT
  </select>
  <insert id="insert" parameterType="com.tob.event.EventVO" >
  	INSERT INTO EVENT
- 	 (EVT_ID,EVT_NAME,FROM_DT,TO_DT)
+ 	 (EVENT_ID,EVENT_NAME,FROM_DT,TO_DT)
  	VALUES
  	 (#{evtId}, #{evtName}, #{fromDt}, #{toDt})
  </insert>
  <update id="update" parameterType="com.tob.event.EventVO">
  	UPDATE EVENT SET
- 		EVT_NAME = #{evtName},
+ 		EVENT_NAME = #{evtName},
  		FROM_DT = #{fromDt},
  		TO_DT = #{toDt}
- 	WHERE EVT_ID = #{evtId}
+ 	WHERE EVENT_ID = #{evtId}
  </update>
  <delete id="delete" parameterType="string">
- 	DELETE FROM MOVIE WHERE EVT_NAME = #{evtName}
+ 	DELETE FROM MOVIE WHERE EVENT_NAME = #{evtName}
  </delete>
 
  </mapper>
