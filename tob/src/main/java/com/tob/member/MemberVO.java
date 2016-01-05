@@ -13,7 +13,7 @@ public class MemberVO implements Serializable{
 	private String password; // 비번
 	private String name; // 회원이름
 	private String birth; // 생년
-	private String gender; //핸드폰
+	private String gender; // 핸드폰
 	private String email; // 이메일
 	private String phone; // 성별
 	private String addr; // 주소
