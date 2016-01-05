@@ -4,8 +4,7 @@
 </div>
 <script type="text/javascript">
 	$(function() {
-	
-		Purchase.list();
+		Purchase.list(context);
 		alert('자동 함수 입력먹음');
 	});
 	

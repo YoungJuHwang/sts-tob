@@ -40,6 +40,7 @@ public class PurchaseServiceImpl implements PurchaseService{
 	public List<PurchaseVO> getList() {
 		logger.info("PurchaseServiceImpl : getList 진입");
 		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		logger.info("PurchaseServiceImpl : getList 빠져나옴.");
 		return mapper.getList();
 	}
 	@Override

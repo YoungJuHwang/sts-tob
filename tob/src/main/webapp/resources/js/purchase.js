@@ -1,10 +1,10 @@
 var Purchase = {
 		main : function(link) {
-			$(".content").load(link+"/purchase/Purchase");
+			$(".mainView").load(link+"/purchase/Purchase");
 		},
-		list : function() {
+		list : function(context) {
 			var arr = [];
-			$.getJSON('/list', function(data) {
+			$.getJSON(context+'/purchase/list', function(data) {
 				alert('list의 겟제이슨 들어옴');
 				var table = '<h1> 전체주문 목록</h1>'
 					+'<table id="pur_list"><tr><th>주문번호</th><th>합계</th><th>어카운트 넘버</th><th>주문한 아이디</th></tr>';

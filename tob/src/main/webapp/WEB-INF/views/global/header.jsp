@@ -26,14 +26,20 @@
 			href="${context}/book/Book"><b>BOOK</b></a></li>    
 		<li style="padding-right: 100px;">
 		<a href="${context}/event/Event"><b>EVENT</b></a></li>
-		<li style="padding-right: 100px;"><a
-			href="${context}/purchase/Purchase"><b>Purchase</b></a></li>
+		<li style="padding-right: 100px;"><a href="${context}/purchase/Purchase"><b>Purchase</b></a></li>
+		<li style="padding-right: 100px;"><button id="btn_pur"> 이게 구매버튼 </button></li>
 		<li style="float: right"><a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span>관리자</a></li>
 		<li style="float: right"><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 		<li style="float: right"><a href="${context}/member/Join">Join</a></li>
 	
 	</ul>
 	</div>
-
 </div>
-
+<script type="text/javascript">
+	$(function() {
+		$('#btn_pur').click(function() {
+			alert('구매버튼 클릭');
+			Purchase.main(context);
+		});
+	});
+</script>

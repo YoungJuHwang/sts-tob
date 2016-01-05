@@ -21,7 +21,7 @@ public class PurchaseController {
 	@RequestMapping("/Purchase")
 	public String main(){
 		logger.info("구매 컨트롤러 - main() 진입");
-		return "purchase/Purchase.tiles";
+		return "purchase/Purchase.jsp";
 	}
 	
 	@RequestMapping("/list")
