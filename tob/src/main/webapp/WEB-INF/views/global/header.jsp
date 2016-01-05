@@ -15,37 +15,27 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll"  href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">TOB</span>||Hanbit
+                    <i class="fa fa-play-circle"></i>  <span class="light"><b>TOB</b></span>||Hanbit
                 </a>
             </div>
             </div>
             </nav>
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse" >
-	<div class="nav navbar-nav">
-	<ul class="nav navbar-nav"	style="padding-top: 20px; margin: 0 auto; ">
+<div class="navbar navbar-inverse" id="bs-example-navbar-collapse" >
+	<div class="nav navbar-nav" style="width: 100%">
+	<ul class="nav navbar-nav"	style="padding-top: 35px; padding-bottom: 5px; margin: 0 auto; width: 100%">
 		<li style="padding-right: 100px;"><a
-			href="${context}/main/Home">HOME</a></li>
-		<li class="dropdown" style="padding-right: 100px;"><a href="${context}/book/Book"
-			class="dropdown-toggle" data-toggle="dropdown" role="button"
-			aria-haspopup="true" aria-expanded="false">BOOK <span
-				class="caret"></span></a>
-			<ul class="dropdown-menu" style="padding-right: 100px">
-				<li><a href="#">국내도서</a></li>
-				<li><a href="#">외국도서</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">eBook</a></li>
-				<li><a href="#">음반·DVD·Gift</a></li>
-				<li><a href="#">중고장터</a></li>
-			</ul></li>
+			href="${context}/main/Home"><b>HOME</b></a></li>
 		<li style="padding-right: 100px;"><a
-			href="${context}/event/Event">EVENT</a></li>
+			href="${context}/book/Book"><b>BOOK</b></a></li>    
+		<li style="padding-right: 100px;">
+		<a href="${context}/event/Event"><b>EVENT</b></a></li>
 		<li style="padding-right: 100px;"><a
-			href="${context}/purchase/Purchase">Purchase</a></li>
-		<li><a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span>관리자</a></li>
-		<li><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-		<li><a href="${context}/member/Join">Join</a></li>
+			href="${context}/purchase/Purchase"><b>Purchase</b></a></li>
+		<li style="float: right"><a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span>관리자</a></li>
+		<li style="float: right"><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		<li style="float: right"><a href="${context}/member/Join">Join</a></li>
+	
 	</ul>
-
 	</div>
 </div>
 
