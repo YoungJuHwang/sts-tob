@@ -25,6 +25,7 @@
 				</ul></li>
 			<li style="padding-right: 100px;"><a href="${context}/event/Event.do">EVENT</a></li>
 			<li style="padding-right: 100px;"><a href="${context}/purchase/Purchase.do">Purchase</a></li>
+			<li style="padding-right: 100px;"><a href="${context}/admin/main">관리자</a></li>
 		</ul>
 		
 	<div id="frm_toggle">
