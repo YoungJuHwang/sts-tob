@@ -45,6 +45,7 @@
 		<li><a href="${context}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 		<li><a href="${context}/member/Join">Join</a></li>
 	</ul>
+
 	
 	</div>
 </div>

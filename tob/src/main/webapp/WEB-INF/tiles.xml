@@ -30,7 +30,7 @@
   </definition>
    
   <definition name="noTiles" template="/WEB-INF/views/noTemplate.jsp">
-  	<put-attribute name="noTemplate" value=""/>
+  	<put-attribute name="content" value=""/>
   </definition>
   
   <definition name="*.jsp" extends="noTiles">
