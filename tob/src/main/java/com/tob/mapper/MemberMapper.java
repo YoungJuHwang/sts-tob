@@ -10,8 +10,9 @@ import com.tob.member.MemberVO;
 @Repository
 public interface MemberMapper {
 	
+	    public String Join(MemberVO o);
 		public int insert(MemberVO o);
-		public int join(MemberVO o);
+		public int join2(MemberVO o);
 		public MemberVO searchById(String userid);
 		public int change(MemberVO o);
 		public int count(); 
@@ -20,7 +21,7 @@ public interface MemberMapper {
 		public int update(MemberVO member);
 		public int delete(String userid);
 		public List<MemberVO> selectSomeBy(String domain, String searchword);
-		public List<MemberVO> getList();
+		public List<MemberVO> getList(Command command);
 		public int changePwd(MemberVO member);
 		public MemberVO selectOneBy(String userid);
 		public MemberVO logout();	

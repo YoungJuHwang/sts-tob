@@ -14,8 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.tob.member.MemberServiceImpl;
+import com.tob.member.MemberVO;
 import com.tob.book.BookServiceImpl;
 import com.tob.book.BookVO;
+import com.tob.event.EventServiceImpl;
+import com.tob.event.EventVO;
 import com.tob.global.CommandFactory;
 
 
@@ -23,35 +27,46 @@ import com.tob.global.CommandFactory;
 @RequestMapping("/admin")
 public class AdminController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
-	 
 
 	@Autowired BookVO book;
 	@Autowired BookServiceImpl bookService;
+	@Autowired MemberVO member;
+	@Autowired MemberServiceImpl memberService;
+	@Autowired EventVO event;
+	@Autowired EventServiceImpl eventService;
 	
 	@RequestMapping("/main")
 	public String home(){
 		logger.info("AdminController-home() 진입");
 		return "admin/admin/main.tiles";
 	}
-	@RequestMapping("/book_list")
-	public Model movieList(Model model){
-		logger.info("AdminController-bookList() 진입");
-		List<BookVO> bookList;
-		bookList = bookService.selectAll();
-		model.addAttribute("bookList",bookList);
-		
-		return model;
+	
+	@RequestMapping("/member_reg")
+	public String memberreg(){
+		logger.info("AdminController-memberReg() 진입");
+		return "admin/admin/memberReg.tiles";
 	}
 	
-	/*@RequestMapping("/member_list/{pageNo}")
+	
+	@RequestMapping("/member_list")
+	public String memberList(){
+		logger.info("AdminController-memberList() 타일즈 진입");
+		return "admin/admin/memberList.tiles";
+	}
+	
+	@RequestMapping("/member_list/{pageNo}")
 	public @ResponseBody Map<String,Object> memberList(
 			@PathVariable("pageNo")String pageNo,
 			Model model){
+		
+		logger.info("AdminController memberList() Ajax진입");
+		logger.info("넘어온 페이지번호 : {}",pageNo);
 		
 		int pageNumber = Integer.parseInt(pageNo);
 		int pageSize = 5;
 		int groupSize = 3;
 		int count = memberService.count();
+		logger.info("넘어온 카운트 : {}",count);
 		int totalPage = count/pageSize;
 		if (count%pageSize != 0) {
 			totalPage += 1;
@@ -62,8 +77,7 @@ public class AdminController {
 			lastPage = totalPage;
 		}
 		
-		logger.info("AdminController memberList()");
-		logger.info("넘어온 페이지번호 : {}",pageNo);
+		
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("list", memberService.getList(CommandFactory.list(pageNo)));
 		map.put("count", count);
@@ -73,7 +87,112 @@ public class AdminController {
 		map.put("lastPage", lastPage);
 		map.put("groupSize", groupSize);
 		return map;
-	}*/
+	}
+	
+
+	
+	@RequestMapping("/book_reg")
+	public String bookreg(){
+		logger.info("AdminController-bookreg() 진입");
+		return "admin/admin/bookReg.tiles";
+	}
+	
+	@RequestMapping("/book_list")
+	public String bookList(){
+		logger.info("AdminController-bookList() 진입");
+		return "admin/admin/bookList.tiles";
+	}
+	
+	@RequestMapping("/book_list/{pageNo}")
+	public @ResponseBody Map<String,Object> bookList(
+			@PathVariable("pageNo")String pageNo,
+			Model model){
+		
+		int pageNumber = Integer.parseInt(pageNo);
+		int pageSize = 5;
+		int groupSize = 3;
+		int count = bookService.amountBook();
+		int totalPage = count/pageSize;
+		if (count%pageSize != 0) {
+			totalPage += 1;
+		}
+		int startPage = pageNumber - ((pageNumber-1) % groupSize);
+		int lastPage = startPage + groupSize -1;
+		if (lastPage > totalPage) {
+			lastPage = totalPage;
+		}
+		
+		logger.info("AdminController bookList()");
+		logger.info("넘어온 페이지번호 : {}",pageNo);
+		Map<String,Object> map = new HashMap<String,Object>();
+		/*map.put("list", bookService.selectAll(CommandFactory.list(pageNo)));*/
+		map.put("count", count);
+		map.put("totalPage", totalPage);
+		map.put("pageNo", pageNumber);
+		map.put("startPage", startPage);
+		map.put("lastPage", lastPage);
+		map.put("groupSize", groupSize);
+		return map;
+	}
+	
+	@RequestMapping("/event_reg")
+	public String eventreg(){
+		logger.info("AdminController-eventreg() 진입");
+		return "admin/admin/eventReg.tiles";
+	}
+	
+	@RequestMapping("/event_list")
+	public String eventList(){
+		logger.info("AdminController-eventList() 진입");
+		return "admin/admin/eventList.tiles";
+	}
+	
+	@RequestMapping("/event_list/{pageNo}")
+	public @ResponseBody Map<String,Object> eventList(
+			@PathVariable("pageNo")String pageNo,
+			Model model){
+		
+		int pageNumber = Integer.parseInt(pageNo);
+		int pageSize = 5;
+		int groupSize = 3;
+		int count = eventService.count();
+		int totalPage = count/pageSize;
+		if (count%pageSize != 0) {
+			totalPage += 1;
+		}
+		int startPage = pageNumber - ((pageNumber-1) % groupSize);
+		int lastPage = startPage + groupSize -1;
+		if (lastPage > totalPage) {
+			lastPage = totalPage;
+		}
+		
+		logger.info("AdminController eventList()");
+		logger.info("넘어온 페이지번호 : {}",pageNo);
+		Map<String,Object> map = new HashMap<String,Object>();
+		/*map.put("list", bookService.getList(CommandFactory.list(pageNo)));*/
+		map.put("count", count);
+		map.put("totalPage", totalPage);
+		map.put("pageNo", pageNumber);
+		map.put("startPage", startPage);
+		map.put("lastPage", lastPage);
+		map.put("groupSize", groupSize);
+		return map;
+	}
+	
+	
+	@RequestMapping("/purchase_list")
+	public String purchaseList(){
+		logger.info("AdminController-purchaseList() 진입");
+		return "admin/admin/purchaseList.tiles";
+	}
+	
+	@RequestMapping("/account_list")
+	public String accountList(){
+		logger.info("AdminController-accountList() 진입");
+		return "admin/admin/accountList.tiles";
+	}
+	
+	
 	
 	/*@RequestMapping("/member_profile")
 	public Model memberProfile(

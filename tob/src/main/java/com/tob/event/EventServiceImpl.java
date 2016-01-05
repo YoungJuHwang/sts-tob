@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tob.global.Command;
 import com.tob.mapper.EventMapper;
 
  
@@ -34,9 +35,9 @@ public class EventServiceImpl implements EventService {
 		return mapper.count();
 	}
 	@Override
-	public List<EventVO> getList() {
+	public List<EventVO> getList(Command command) {
 		EventMapper mapper = sqlSession.getMapper(EventMapper.class);
-		return mapper.selectAll();
+		return mapper.selectAll(command);
 	}
 	@Override
 	public int join(EventVO o) {

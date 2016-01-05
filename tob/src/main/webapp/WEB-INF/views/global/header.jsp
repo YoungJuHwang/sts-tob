@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -25,8 +24,8 @@
 			href="${context}/main/Home"><b>HOME</b></a></li>
 		<li style="padding-right: 100px;"><a
 			href="${context}/book/Book"><b>BOOK</b></a></li>    
-		<li style="padding-right: 100px;"><a
-			href="${context}/event/Event"><b>EVENT</b></a></li>
+		<li style="padding-right: 100px;">
+		<a href="${context}/event/Event"><b>EVENT</b></a></li>
 		<li style="padding-right: 100px;"><a
 			href="${context}/purchase/Purchase"><b>Purchase</b></a></li>
 		<li style="float: right"><a href="${context}/admin/main"><span class="glyphicon glyphicon-user"></span>관리자</a></li>
@@ -35,5 +34,6 @@
 	
 	</ul>
 	</div>
+
 </div>
 

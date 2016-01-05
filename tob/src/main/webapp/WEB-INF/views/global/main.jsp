@@ -137,8 +137,6 @@
             </div>
         </div>
     </section>
-
- 
    
     <!-- jQuery -->
     <script src="${context}/resources/js/jquery.js"></script>
@@ -146,13 +144,5 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="${context}/resources/js/bootstrap.min.js"></script>
 
-	<script src="jssor.slider.mini.js"></script>
-   <script>
-    $(function () {
-        var options = { $AutoPlay: true };
-        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-    });
-</script>
-
-
 </div>
+
