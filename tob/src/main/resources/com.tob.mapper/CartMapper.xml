@@ -3,11 +3,13 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tob.mapper.CartMapper">
  
- <select id="" resultType="" parameterType=""></select>
- 
- <insert id="" parameterType="">
+ <insert id="regist" parameterType="">
  
  </insert>
+ 
+ <select id="" resultType="" parameterType="">
+ 
+ </select>
  
  <delete id="" parameterType="">
  

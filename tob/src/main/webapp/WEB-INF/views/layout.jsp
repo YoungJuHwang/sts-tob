@@ -23,6 +23,8 @@
 			<tiles:insertAttribute name="footer" />
 		</div>
 	</div>
+<script src="${js}/purchase.js"></script>
+	
 </body>
 </html>
 
