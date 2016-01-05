@@ -1,9 +1,16 @@
-package com.tob.purchase;
+package com.tob.mapper;
 
 import java.util.List;
 
-public interface PurchaseService {
-  
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.tob.purchase.PurchaseVO;
+@Repository
+public interface PerchaseMapper {
+	
+	
+	
 	// 주문내역 추가
 		public int add(PurchaseVO o);
 		
@@ -21,5 +28,4 @@ public interface PurchaseService {
 		
 		// 주문내역 삭제
 		public int remove(String purNum);
-		
 }
