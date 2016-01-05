@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-	<!-- 일반사용자용 타일즈 -->
+	 <!-- 공유 타일즈 -->
   <definition name="layout" template="/WEB-INF/views/layout.jsp">
     <put-attribute name="header" value="" />
     <put-attribute name="content" value="" />
@@ -23,7 +23,7 @@
   </definition>
   
   
-  <!-- 상속의 개념으로 받을 수 있다. -->
+  <!-- 일반사용자용 타일즈 -->
   <definition name="*/*.tiles" extends="layout">
    	<put-attribute name="header" value="/WEB-INF/views/global/header.jsp"/>
     <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
