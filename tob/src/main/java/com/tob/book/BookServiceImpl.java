@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tob.global.Command;
 import com.tob.mapper.BookMapper;
  
 
@@ -48,9 +49,9 @@ public BookVO searchByBook(String book) {
 
 
 @Override  	// 전체 책 목록
-public List<BookVO> selectAll() {
+public List<BookVO> selectAll(Command command) {
 	BookMapper mapper = sqlSession.getMapper(BookMapper.class);
-	return mapper.selectAll();
+	return mapper.selectAll(command);
 }
 
 

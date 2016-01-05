@@ -52,8 +52,6 @@
             </div>
         </div>
     </section>
-
- 
    
     <!-- jQuery -->
     <script src="${context}/resources/js/jquery.js"></script>
@@ -61,8 +59,5 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="${context}/resources/js/bootstrap.min.js"></script>
 
-
-   
-
-
 </div>
+
