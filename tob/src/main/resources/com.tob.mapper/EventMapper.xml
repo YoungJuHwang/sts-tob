@@ -3,7 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.tob.mapper.EventMapper">
- <select id="selectAll" resultType="com.tob.event.EventVO">
+ <select id="selectAll" resultType="com.tob.event.EventVO" parameterType="com.tob.global.Command">
  	SELECT
  	 	EVENT_ID AS evtId,
  	 	EVENT_NAME AS evtName,

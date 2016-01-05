@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.tob.book.BookVO;
+import com.tob.global.Command;
 @Repository
 public interface BookMapper {
 
@@ -13,7 +14,7 @@ public interface BookMapper {
 	public BookVO searchByBook(String userid);
 	public int update(BookVO book);//책 수정
 	 
-	public List<BookVO> selectAll();
+	public List<BookVO> selectAll(Command command);
 	
 	public int amountBook();  // 책 수량 <count>
 
