@@ -16,7 +16,7 @@ public class EventController {
 	@Autowired EventVO movie;
 	
 	@RequestMapping("/Event")
-	public String main(){
+	public String event(){
 		logger.info("EventController :Event()");
 		return "event/Event.tiles";
 	}
