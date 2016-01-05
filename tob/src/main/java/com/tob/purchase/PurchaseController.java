@@ -19,14 +19,14 @@ public class PurchaseController {
 	
 	
 	@RequestMapping("/Purchase")
-	public String purchase(){
-		logger.info("컨트롤러 - purchase() 진입");
-		return "purchase/Purchase.jsp";
+	public String main(){
+		logger.info("구매 컨트롤러 - main() 진입");
+		return "purchase/Purchase.tiles";
 	}
 	
 	@RequestMapping("/list")
 	public @ResponseBody List<PurchaseVO> list(){
-		logger.info("컨트롤러 - list() 진입");
+		logger.info("구매 컨트롤러 - list() 진입");
 		List<PurchaseVO> list = service.getList();
 		return list;
 	}
