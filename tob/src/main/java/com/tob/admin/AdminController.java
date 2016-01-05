@@ -43,25 +43,30 @@ public class AdminController {
 	
 	@RequestMapping("/member_reg")
 	public String memberreg(){
-		logger.info("AdminController-memberreg() 진입");
+		logger.info("AdminController-memberReg() 진입");
 		return "admin/admin/memberReg.tiles";
 	}
 	
 	
 	@RequestMapping("/member_list")
 	public String memberList(){
-		logger.info("AdminController-memberList() 진입");
+		logger.info("AdminController-memberList() 타일즈 진입");
 		return "admin/admin/memberList.tiles";
 	}
+	
 	@RequestMapping("/member_list/{pageNo}")
 	public @ResponseBody Map<String,Object> memberList(
 			@PathVariable("pageNo")String pageNo,
 			Model model){
 		
+		logger.info("AdminController memberList() Ajax진입");
+		logger.info("넘어온 페이지번호 : {}",pageNo);
+		
 		int pageNumber = Integer.parseInt(pageNo);
 		int pageSize = 5;
 		int groupSize = 3;
 		int count = memberService.count();
+		logger.info("넘어온 카운트 : {}",count);
 		int totalPage = count/pageSize;
 		if (count%pageSize != 0) {
 			totalPage += 1;
@@ -72,8 +77,7 @@ public class AdminController {
 			lastPage = totalPage;
 		}
 		
-		logger.info("AdminController memberList()");
-		logger.info("넘어온 페이지번호 : {}",pageNo);
+		
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("list", memberService.getList(CommandFactory.list(pageNo)));
 		map.put("count", count);

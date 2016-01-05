@@ -2,12 +2,15 @@
 <h1>전체 회원 목록 페이지</h1>
 <script type="text/javascript">
 $(function() {
-	Admin2.memberList('1');
+	alert("멤버리스트 ready");
+	Admin.memberList('1');
 });
 
-var Admin2 = {
+var Admin = {
 		 memberList : function(pageNo) {
+			 
 				$.getJSON(context+'/admin/member_list/'+pageNo ,function(data) {
+					alert("겟 제이슨 들어갔네");
 					var count = data.count;
 					var pageNo = data.pageNo; 
 					var startPage = data.startPage;
@@ -91,7 +94,7 @@ var Admin2 = {
 					+'</TABLE>';
 					
 					table += pagination;
-					$('.mainView').html(table);
+					$('#content').html(table);
 					
 				});
 
