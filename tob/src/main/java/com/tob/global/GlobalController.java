@@ -14,9 +14,8 @@ private static final Logger logger = LoggerFactory.getLogger(GlobalController.cl
 	
 @RequestMapping("/") //get방식
 	public String main(){
-		
 		return "global/main.tiles";
 	}
-	
-	
+
+
 }

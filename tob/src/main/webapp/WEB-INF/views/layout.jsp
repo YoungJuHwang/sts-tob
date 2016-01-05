@@ -3,26 +3,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-		<title>TOB</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <meta charset="UTF-8" />
+      <title>TOB</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <link rel="stylesheet" href="${css}/book.css" />
 </head>
 <body>
-	<div id="wrap">
-		<div id="header">
-			<tiles:insertAttribute name="header" />
-		</div>
-		<div id="content">
-			<section class="sectionClass">
-				<div class="mainView">
-					<tiles:insertAttribute name="content" />
-				</div>
-			</section>
-		</div>
-		<div id="footer">
-			<tiles:insertAttribute name="footer" />
-		</div>
-	</div>
+   <div id="wrap">
+      <div id="header">
+         <tiles:insertAttribute name="header" />
+      </div>
+      <div id="content">
+         <section class="sectionClass">
+            <div class="mainView">
+               <tiles:insertAttribute name="content" />
+            </div>
+         </section>
+      </div>
+      <div id="footer">
+         <tiles:insertAttribute name="footer" />
+      </div>
+   </div>
+
+   
 </body>
 </html>
-

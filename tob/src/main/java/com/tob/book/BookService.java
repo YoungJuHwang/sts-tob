@@ -1,6 +1,8 @@
 package com.tob.book;
 
 import java.util.List;
+
+import com.tob.global.Command;
  
 public interface BookService {
 	
@@ -20,7 +22,7 @@ public interface BookService {
 	
 	
 	// 전체 책 목록
-	public List<BookVO> selectAll();
+	public List<BookVO> selectAll(Command command);
 
 	//정보 수정
 	public int change(BookVO book);
