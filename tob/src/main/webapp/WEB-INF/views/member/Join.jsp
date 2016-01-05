@@ -5,9 +5,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  <div class="login">
- <span class="label label-default" style=width:100px; >로그인</span>
-  <form class="form-horizontal" role="form">
-    <div class="form-group">
+ <h2><span class="label label-default" >로그인</span></h2>
+  <form class="loginform" role="form">
+    <div class="loginput">
       <label class="control-label col-sm-2" for="id">아이디:</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="userid" placeholder="아이디를 입력해주세요">
@@ -27,14 +27,14 @@
       </div>
     </div>
     <div class="container">
-	  <button type="button" class="btn btn-info">로그인</button>   
+	  <button type="button" class="btn btn-default">로그인</button>   
 	</div>
   </form>
 </div>
  
  
  <div class="회원가입">
-  <span class="label label-default">회원가입</span>
+   <h2><span class="label label-default">회원가입</span> </h2>
   <form class="form-horizontal" role="form">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">아이디:</label>
@@ -96,15 +96,15 @@
       </div>
     </div>
    	<div class="container">
-	  <button type="button" class="btn btn-info">회원가입완료</button>   
-	  <button type="button" class="btn btn-info">회원가입취소</button>   
+	  <button type="button" class="btn btn-default">회원가입완료</button>   
+	  <button type="button" class="btn btn-default">회원가입취소</button>   
 	</div>
   </form>
 </div>
  
  
  <div class="회원정보수정">
-  <span class="label label-default">회원정보수정</span>
+   <h2><span class="label label-default">회원정보수정</span></h2>
   <form class="form-horizontal" role="form">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">아이디:</label>
@@ -161,8 +161,8 @@
       </div>
     </div>
    	<div class="container">
-	  <button type="button" class="btn btn-info">정보수정완료</button>   
-	  <button type="button" class="btn btn-info">정보수정취소</button>   
+	  <button type="button" class="btn btn-default">정보수정완료</button>   
+	  <button type="button" class="btn btn-default">정보수정취소</button>   
 	</div>
   </form>
 </div>
