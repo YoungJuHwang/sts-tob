@@ -20,7 +20,7 @@ DELETE FROM BOOK WHERE BOOK_ID = #{bookId}
 
 
 
-<select id="searchByBook" parameterType="string" resultType="com.top.book.BookVO">
+<select id="searchByBook" parameterType="string" resultType="com.tob.book.BookVO">
 SELECT
 
 BOOK_ID AS bookId,
@@ -36,7 +36,7 @@ FROM BOOK WHERE BOOK_ID = #{bookId}
  
 </select>
 
-<update id="update" parameterType="com.top.book.BookVO">
+<update id="update" parameterType="com.tob.book.BookVO">
 UPDATE BOOK SET
 BOOK_ID = #{bookId},
 BOOK_NAME = #{bookName},
@@ -49,7 +49,7 @@ GENRE_ID = #{genreId}
 WHERE BOOK_ID = #{bookId}
 </update>
 
-<select id="selectAll" resultType="com.top.book.BookVO">
+<select id="selectAll" resultType="com.tob.book.BookVO" parameterType="com.tob.global.Command">
 Select
 BOOK_ID AS bookId,
 BOOK_NAME AS bookName,
