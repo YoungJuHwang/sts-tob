@@ -16,9 +16,9 @@ public class EventController {
 	@Autowired EventVO movie;
 	
 	@RequestMapping("/Event")
-	public String event(){
+	public String main(){
 		logger.info("EventController :Event()");
-		return "event/Event.jsp";
+		return "event/Event.tiles";
 	}
 	@RequestMapping("/join_event1")
 	public String joinEvent1(String evtId, String evtName, String fromDt, String toDt){

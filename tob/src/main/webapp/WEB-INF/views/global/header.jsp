@@ -46,7 +46,6 @@
 		<li><a href="${context}/member/Join">Join</a></li>
 	</ul>
 
-	
 	</div>
 </div>
 
