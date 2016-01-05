@@ -6,21 +6,6 @@ a{ text-decoration: none;}
 a.highlight {
       color: black;
 }
-.wrap{
-	width: 1200px;
-	height: 2000px;
-	border: 1px solid black;
-}
-.header{
-	width: 1200px;
-	height: 300px;
-	text-align: center;
-	padding: 0;
-}
-.vacuum{
-      width:1200px;
-      height: 180px;
-}
 .big{
 	width: 1200px;
 	height: 1700px;
