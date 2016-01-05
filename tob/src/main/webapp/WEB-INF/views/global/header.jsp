@@ -8,21 +8,19 @@
 
 <!-- Header -->
 <!-- Collect the nav links, forms, and other content for toggling -->
- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
+<div class="navbar navbar-inverse" id="bs-example-navbar-collapse" >
+<div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll"  href="#page-top">
+                <a class="navbar-brand page-scroll"  href="#">
                     <i class="fa fa-play-circle"></i>  <span class="light"><b>TOB</b></span>||Hanbit
                 </a>
             </div>
             </div>
-            </nav>
-<div class="navbar navbar-inverse" id="bs-example-navbar-collapse" >
 	<div class="nav navbar-nav" style="width: 100%">
-	<ul class="nav navbar-nav"	style="padding-top: 35px; padding-bottom: 5px; margin: 0 auto; width: 100%">
+	<ul class="nav navbar-nav"	style="padding-bottom: 5px; margin: 0 auto; width: 100%">
 		<li style="padding-right: 100px;"><a
 			href="${context}/main/Home"><b>HOME</b></a></li>
 		<li style="padding-right: 100px;"><a
