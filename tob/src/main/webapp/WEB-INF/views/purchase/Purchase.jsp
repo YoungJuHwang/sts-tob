@@ -8,4 +8,5 @@
 		Purchase.list();
 		alert('자동 함수 입력먹음');
 	});
+	
 </script>

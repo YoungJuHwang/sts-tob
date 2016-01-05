@@ -8,11 +8,16 @@
   	<typeAlias type="com.hnb.movie.MovieVO" alias="Movie" />
   </typeAliases> -->
   <mappers>
-   <!--  <mapper resource="com/hnb/mapper/AdminMapper.xml"/>
-    <mapper resource="com/hnb/mapper/ArticleMapper.xml"/>
-    <mapper resource="com/hnb/mapper/MemberMapper.xml"/>
-    <mapper resource="com/hnb/mapper/MovieMapper.xml"/>
-    <mapper resource="com/hnb/mapper/ScheduleMapper.xml"/>
-    <mapper resource="com/hnb/mapper/TicketMapper.xml"/> -->
+    <mapper resource="com/tob/mapper/AccountMapper.xml"/>
+    <mapper resource="com/tob/mapper/AdminMapper.xml"/>
+    <mapper resource="com/tob/mapper/BookMapper.xml"/>
+    <mapper resource="com/tob/mapper/CartMapper.xml"/>
+    <mapper resource="com/tob/mapper/CategoryMapper.xml"/>
+    <mapper resource="com/tob/mapper/EventMapper.xml"/>
+    <mapper resource="com/tob/mapper/GenreMapper.xml"/>
+    <mapper resource="com/tob/mapper/MemberMapper.xml"/>
+    <mapper resource="com/tob/mapper/Option2Mapper.xml"/>
+    <mapper resource="com/tob/mapper/PurchaseMapper.xml"/>
+    <mapper resource="com/tob/mapper/StockMapper.xml"/>
   </mappers>
 </configuration>
