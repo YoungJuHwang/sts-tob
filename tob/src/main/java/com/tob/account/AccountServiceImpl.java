@@ -15,7 +15,7 @@ import com.tob.mapper.AccountMapper;
 
 @Service
 public class AccountServiceImpl implements AccountService{
-	private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
+	private static final Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
 	@Autowired private SqlSession sqlSession;
 	
 	@Override

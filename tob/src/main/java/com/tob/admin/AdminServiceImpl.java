@@ -13,9 +13,9 @@ import com.tob.account.AccountController;
 @Service
 
 public class AdminServiceImpl implements AdminService{
-	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
-	@SuppressWarnings("unused")
+	
+	private static final Logger logger = LoggerFactory.getLogger(AdminServiceImpl.class);
+
 	@Autowired private SqlSession sqlSession;
 	 
 	

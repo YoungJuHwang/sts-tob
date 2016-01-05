@@ -5,7 +5,7 @@
 
  <mapper namespace="com.hnb.mapper.AccountMapper">
  
- <insert id="insert" parameterType="com.hnb.member.MemberVO">
+ <insert id="insert" parameterType="com.tob.account.AccountVO">
  	INSERT INTO ACCOUNT (ACCOUNT_NUM,TOTAL,ID) 
  	VALUES (
 	 	#{account_num},
@@ -14,7 +14,7 @@
  	)
  </insert>
  
- <select id="selectAll" resultType="com.hnb.account.AccountVO" parameterType="com.hnb.global.Command">
+ <select id="selectAll" resultType="com.tob.account.AccountVO" parameterType="com.tob.global.Command">
  	SELECT 
 	 	ACCOUNT_NUM AS account_num,
 	 	TOTAL AS total,
@@ -23,7 +23,7 @@
  	WHERE seq BETWEEN #{start} AND #{end}
  </select>
 
- <select id="selectOneBy" resultType="com.hnb.account.AccountVO" parameterType="com.hnb.global.Command">
+ <select id="selectOneBy" resultType="com.tob.account.AccountVO" parameterType="com.tob.global.Command">
  	SELECT
  		ACCOUNT_NUM AS account_num,
 	 	TOTAL AS total,
@@ -35,7 +35,7 @@
  	SELECT COUNT(*) AS count FROM ACCOUNT
  </select>
  
- <select id="countByKeyword" resultType="int" parameterType="com.hnb.global.Command">
+ <select id="countByKeyword" resultType="int" parameterType="com.tob.global.Command">
  SELECT COUNT(*) AS count 
  FROM ACCOUNT
  WHERE ${column} LIKE '%' || #{keyword} || '%'
