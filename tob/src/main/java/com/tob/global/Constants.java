@@ -6,9 +6,6 @@ package com.tob.global;
  * @story     : 
  */
 public class Constants {
-	/**
-	 * 밴더(Vendor : 공급업체) 가 제공하는 low-level 의 접속값
-	 */
 	public static final String ORACLE_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	public static final String ORACLE_URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	public static final String ORACLE_ID = "movie";
