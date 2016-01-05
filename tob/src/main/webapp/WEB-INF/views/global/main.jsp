@@ -3,10 +3,13 @@
 <div style="margin: auto;">
 
 
+
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+            
+     
             <img src="${context}/resources/images/info.jpg" style="width: 100%;" />
                 <hr />
                   <h3>베스트셀러</h3>
@@ -143,8 +146,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="${context}/resources/js/bootstrap.min.js"></script>
 
-
-   
+	<script src="jssor.slider.mini.js"></script>
+   <script>
+    $(function () {
+        var options = { $AutoPlay: true };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
 
 
 </div>
