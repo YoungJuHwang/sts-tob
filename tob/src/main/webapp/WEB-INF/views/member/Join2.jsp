@@ -3,7 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 $(function() {
-	$("#joinBtn").click(function() {
+	$("#Join").click(function() {
 		if($("#userid").val() == "") {
 			alert("아이디를 입력하세요s.");
 			$("#userid").focus();

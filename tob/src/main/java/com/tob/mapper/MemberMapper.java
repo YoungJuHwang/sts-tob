@@ -10,8 +10,9 @@ import com.tob.member.MemberVO;
 @Repository
 public interface MemberMapper {
 	
+	    public String Join(MemberVO o);
 		public int insert(MemberVO o);
-		public int join(MemberVO o);
+		public int join2(MemberVO o);
 		public MemberVO searchById(String userid);
 		public int change(MemberVO o);
 		public int count(); 
