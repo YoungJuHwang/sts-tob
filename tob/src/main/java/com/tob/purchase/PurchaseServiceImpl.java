@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tob.mapper.AccountMapper;
-import com.tob.mapper.PerchaseMapper;
+import com.tob.mapper.PurchaseMapper;
 
   
 @Service
@@ -20,26 +20,38 @@ public class PurchaseServiceImpl implements PurchaseService{
 	
 	@Override
 	public int add(PurchaseVO o) {
-		return 0;
+		logger.info("PurchaseServiceImpl : add 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.add(o);
 	}
 	@Override
 	public PurchaseVO searchBypurNum(String purNum) {
-		return null;
+		logger.info("PurchaseServiceImpl : searchBypurNum 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.searchBypurNum(purNum);
 	}
 	@Override
 	public List<PurchaseVO> searchByAccNum(String accountNum) {
-		return null;
+		logger.info("PurchaseServiceImpl : searchByAccNum 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.searchByAccNum(accountNum);
 	}
 	@Override
 	public List<PurchaseVO> getList() {
-		return null;
+		logger.info("PurchaseServiceImpl : getList 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.getList();
 	}
 	@Override
 	public int change(PurchaseVO o) {
-		return 0;
+		logger.info("PurchaseServiceImpl : change 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.change(o);
 	}
 	@Override
 	public int remove(String purNum) {
-		return 0;
+		logger.info("PurchaseServiceImpl : remove 진입");
+		PurchaseMapper mapper = sqlSession.getMapper(PurchaseMapper.class);
+		return mapper.remove(purNum);
 	}
 }

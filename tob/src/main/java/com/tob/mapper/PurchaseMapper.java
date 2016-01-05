@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.tob.purchase.PurchaseVO;
 @Repository
-public interface PerchaseMapper {
+public interface PurchaseMapper {
 	
 	
 	
